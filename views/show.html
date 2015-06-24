@@ -1,0 +1,19 @@
+<!-- {% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{doc.title}}</h1>
+  	<div>
+      	<p>{{doc.content}}</p>
+  	</div>
+{% endblock %} -->
+
+{% extends "layout.html" %}
+
+{% block title %}{{doc.title}}{% endblock %}
+
+{% block content %}
+<h1>{{doc.title}}</h1>
+  <div>
+  	{{ doc.content | marked }}
+  </div>
+{% endblock %}
